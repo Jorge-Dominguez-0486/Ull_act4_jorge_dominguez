@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos de Biblias jorge dominguez</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+        }
+        .productos-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .producto-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+        }
+        .producto-card h2 {
+            color: #2196F3;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        .producto-card p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .producto-card .precio {
+            font-weight: bold;
+            color: #E91E63;
+        }
+        .producto-card .editorial {
+            font-style: italic;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nuestros Productos de Biblias jorge dominguez</h1>
+
+    <div class="productos-container">
+        {% for producto in productos %}
+        <div class="producto-card">
+            <h2>{{ producto.nombre }}</h2>
+            <p class="precio">Precio: {{ producto.precio }}</p>
+            <p class="editorial">Editorial: {{ producto.editorial }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
